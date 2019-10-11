@@ -9,6 +9,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 }
 */
 
+
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 display:block;
 }
@@ -34,8 +35,9 @@ html, body {
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 9999999;
-    background: url(https://media.giphy.com/media/3oeHLhzRkRX1bQQBPi/giphy.gif) center no-repeat #000000;
+    z-index: 999999;
+    background: url('images/loader.gif') center no-repeat #000000;
+    background-size: cover;
     opacity: 0;
 }
 
@@ -62,6 +64,10 @@ images/loader.svg
 	clear: both;
 }
 
+.glyphicon {
+    font-size: 30px;
+}
+
 p {
 	font-size: 1em;
 	line-height: 1.4em;
@@ -72,14 +78,14 @@ p {
 #cv {
 	width: 90%;
 	max-width: 800px;
-	background: #f3f3f3;
+	background: #000;
 	margin: 30px auto;
 }
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
-	background: #ededed;
+	border-bottom: 2px solid #60abc1;
+	background: #e8ebff;
 }
 
 #name h1 {
@@ -100,16 +106,17 @@ p {
 }
 
 #headshot {
-	width: 12.5%;
+	width: 20%;
 	float: left;
 	margin-right: 30px;
+  margin-top: 60px;
 }
 
 #headshot img {
 	width: 100%;
 	height: auto;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
 }
 
 #name {
@@ -161,6 +168,7 @@ section:last-child {
 .sectionTitle {
 	float: left;
 	width: 25%;
+  color: #6fa8ea;
 }
 
 .sectionContent {
@@ -172,7 +180,7 @@ section:last-child {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 1.5em;
-	color: #cf8a05;
+	color: #60abc1;
 }
 
 .sectionContent h2 {
@@ -260,7 +268,6 @@ section:last-child {
 		padding: 0 25px;
 	}
 
-
 	.keySkills {
 	-moz-column-count:1;
 	-webkit-column-count:1;
@@ -309,6 +316,8 @@ section:last-child {
 	}
   100% {
 		opacity: 0;
+    display:none;
+    z-index: -1;
 	}
 }
 
@@ -342,6 +351,8 @@ section:last-child {
 	}
   100% {
 		opacity: 0;
+    display:none;
+    z-index: -1;
 	}
 }
 
@@ -374,6 +385,8 @@ section:last-child {
 	}
   100% {
 		opacity: 0;
+    display:none;
+    z-index: -1;
 	}
 }
 
@@ -381,14 +394,17 @@ section:last-child {
     -webkit-animation-name: reset, fade-out;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
 
 	  -moz-animation-name: reset, fade-out;
     -moz-animation-duration: 1.5s;
     -moz-animation-timing-function: ease-in-out;
+    -moz-animation-fill-mode: forwards;
 
 	  animation-name: reset, fade-out;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .instaFade {
